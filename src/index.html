@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./output.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="p-3 flex bg-white justify-between items-center shadow-md">
+      <a
+        href=""
+        id="brand"
+        class="flex justify-between items-center gap-2 font-medium"
+      >
+        <img
+          src="../assets/asset 1.png"
+          alt="Logo"
+          class="max-w-12 object-cover rounded-full"
+        />
+        <span class="font-sdp-font text-lg">@sud.artsy</span>
+      </a>
+      <div id="nav-menu" class="hidden md:flex gap-12 text-center">
+        <a href="" class="font-sdp-font font-medium hover:text-purple-700"
+          >About Me</a
+        >
+        <a href="" class="font-sdp-font font-medium hover:text-purple-700"
+          >My Tech Stack</a
+        >
+        <a href="" class="font-sdp-font font-medium hover:text-purple-700"
+          >My Works</a
+        >
+        <a href="" class="font-sdp-font font-medium hover:text-purple-700"
+          >Contact Me</a
+        >
+        <a href="" class="font-sdp-font font-medium hover:text-purple-700"
+          >Blogs</a
+        >
+      </div>
+
+      <button
+        class="hidden md:flex items-center gap-2 border-2 px-6 py-2 rounded-xl hover:border-gray-800 hover:scale-105 ease-in-out duration-300"
+      >
+        <i class="fa-brands fa-github"></i>
+        <span>Redirect to GitHub</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+      <button class="p-2 md:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-gray-600"></i>
+      </button>
+
+      <!-- navbar for mobile -->
+      <div
+        id="nav-dialog"
+        class="hidden fixed z-10 md:hidden bg-white inset-0 p-3"
+      >
+        <div id="nav-bar" class="flex justify-between">
+          <a
+            href=""
+            id="brand"
+            class="flex justify-between items-center gap-2 font-medium"
+          >
+            <img
+              src="../assets/asset 1.png"
+              alt="Logo"
+              class="max-w-12 object-cover rounded-full"
+            />
+            <span class="font-sdp-font text-lg">Welcome</span>
+          </a>
+          <button class="p-2 md:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-x text-gray-600"></i>
+          </button>
+        </div>
+        <div class="mt-6 flex flex-col gap-10 font-medium font-sudip-font ml-3">
+          <a href="" class="hover:bg-gray-50 py-2">About Me</a>
+          <a href="" class="hover:bg-gray-50 py-2">My Tech Stack</a>
+          <a href="" class="hover:bg-gray-50 py-2">My Works</a>
+          <a href="" class="hover:bg-gray-50 py-2">Contact Me</a>
+          <a href="" class="hover:bg-gray-50 py-2">Blog</a>
+        </div>
+        <button
+          class="flex items-center gap-2 border-2 px-6 py-2 mt-10 rounded-xl hover:border-gray-800 hover:scale-105 ease-in-out duration-300"
+        >
+          <i class="fa-brands fa-github"></i>
+          <span>Redirect to GitHub</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Main  -->
+    <main>
+      <!-- Hero Section  -->
+      <div
+        id="hero"
+        class="min-h-screen bg-gradient-to-br from-purple-50 via-orange-50 to-transparent py-4"
+      >
+        <div
+          id="hero-container"
+          class="max-w-4xl mx-auto px-6 pb-16 flex flex-col items-center group gap-4"
+        >
+          <div
+            id="version-text"
+            class="flex gap-2 my-6 items-center justify-start bg-yellow-50 border border-yellow-300 px-3 py-2 w-fit rounded-xl cursor-pointer hover:shadow-lg hover:-translate-y-1 ease-in-out duration-300 group md:text-center"
+          >
+            <div
+              class="w-2 h-2 rounded-full bg-yellow-400 border border-yellow-900"
+            ></div>
+            <p class="font-sudip-font text-yellow-800">
+              <span class="font-medium text-yellow-600">v 1.0.0: </span>This is
+              the First version of portfolio
+            </p>
+            <i
+              class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"
+            ></i>
+          </div>
+          <div
+            id="hero-features"
+            class="hidden md:flex flex-row gap-10 pb-10 text-gray-500"
+          >
+            <div class="flex flex-row justify-center items-center gap-2">
+              <i class="fa-solid fa-rocket text-2xl"></i>
+              <p>Robust Developer</p>
+            </div>
+            <div class="flex flex-row justify-center items-center gap-2">
+              <i class="fa-solid fa-lightbulb text-2xl"></i>
+              <p>Problem Solving Skill</p>
+            </div>
+            <div class="flex flex-row justify-center items-center gap-2">
+              <i class="fa-solid fa-chart-simple text-2xl"></i>
+              <p>Adaptability</p>
+            </div>
+          </div>
+
+          <h1
+            class="text-6xl md:text-7xl font-title-font text-gray-800 font-medium text-center"
+          >
+            Web Developer
+          </h1>
+          <h2 class="text-4xl font-semibold text-center font-sdp-font">
+            & Designer
+          </h2>
+          <h3 class="text-2xl font-medium text-center leading-snug pt-8">
+            I am a web developer skilled in React, Tailwind CSS, Node.js,
+            PostgreSQL, and Figma. I specialize in building responsive,
+            user-friendly applications with a focus on seamless design and
+            functionality.
+          </h3>
+          <button
+            class="text-white font-semibold bg-purple-700 w-fit text-center px-5 py-2 rounded-lg mt-4 hover:scale-105 transition duration-300 hover:text-black hover:bg-white hover:border hover:border-purple-700"
+          >
+            Download CV
+          </button>
+        </div>
+
+        <div id="techstack-titles" class="text-2xl text-center font-medium">
+          <span class="font-medium">My Tech Stack</span>
+        </div>
+        <div id="tech-lines-group" class="flex flex-col pt-8 overflow-x-hidden">
+          <div
+            id="line1"
+            class="line1 flex gap-5 w-screen -translate-x-48 transition ease-linear"
+          >
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/1174949_js_react js_logo_react_react native_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold"
+                >React.js</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/9055799_bxl_tailwind_css_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold text-center"
+                >Tailwind Css</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/259267_copy_sdks_nodejs_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold"
+                >Node.js</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/2993708_adobe_brand_brands_illustrator_logo_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold"
+                >Illustrator</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/7564187_figma_logo_brand_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold"
+                >Figma</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/4373282_adobe_logo_logos_photoshop_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold"
+                >Photoshop</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/1174949_js_react js_logo_react_react native_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold"
+                >React.js</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/9055799_bxl_tailwind_css_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold text-center"
+                >Tailwind Css</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/259267_copy_sdks_nodejs_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold"
+                >Node.js</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/4691328_postgresql_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold"
+                >PostgreSQL</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/2993708_adobe_brand_brands_illustrator_logo_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold"
+                >Illustrator</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/4469559_adobe_logo_logos_premier_pro_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold"
+                >Premier Pro</span
+              >
+            </div>
+            <div
+              class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-gray-300 md:min-w-32 md:min-h-32"
+            >
+              <img
+                src="../assets/1174949_js_react js_logo_react_react native_icon.png"
+                class="w-12 h-12 md:h-16 md:w-16 rounded-xl"
+                alt=""
+              />
+              <span class="text-[12px] md:text-[16px] font-semibold"
+                >React.js</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- bento grid -->
+      <div class="container">
+        <h2 class="text-5xl sm:font-semibold mb-14 pb-6 md:text-center">
+          My Works
+        </h2>
+        <div
+          id="grid-container"
+          class="flex flex-col gap-6 lg:grid lg:grid-cols-3"
+          style="grid-auto-rows: 96px"
+        >
+          <div
+            class="row-start-1 row-end-3 group rounded-2xl p-[1px] bg-slate-50 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition ease-linear duration-300"
+          >
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-5 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition ease-linear duration-300"
+            >
+              <h3 class="text-2xl font-sudip-font">Graphics Works</h3>
+              <img
+                class="rounded-xl h-32 w-96"
+                src="../assets/grid1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="row-start-1 row-end-4 group rounded-2xl p-[1px] bg-slate-50 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition ease-linear duration-300"
+          >
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition ease-linear duration-300"
+            >
+              <h3 class="text-2xl font-sudip-font">Graphics Works</h3>
+              <p class="text-center">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam,
+                earum eius unde deserunt vitae!
+              </p>
+              <img
+                class="h-32 w-96 rounded-xl"
+                src="../assets/grid1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="row-start-1 row-end-3 group rounded-2xl p-[1px] bg-slate-50 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition ease-linear duration-300"
+          >
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition ease-linear duration-300"
+            >
+              <h3 class="text-2xl font-sudip-font">Graphics Works</h3>
+              <img
+                class="h-32 w-96 rounded-xl"
+                src="../assets/grid1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="row-start-3 row-end-6 group rounded-2xl p-[1px] bg-slate-50 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition ease-linear duration-300"
+          >
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition ease-linear duration-300"
+            >
+              <h3 class="text-2xl font-sudip-font">Graphics Works</h3>
+              <p class="text-center">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam,
+                earum eius unde deserunt vitae illo quos atque, mollitia
+                consectetur recusandae, numquam reprehenderit? Harum!
+              </p>
+              <img
+                class="h-32 w-96 rounded-xl"
+                src="../assets/grid1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="row-start-4 row-end-6 group rounded-2xl p-[1px] bg-slate-50 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition ease-linear duration-300"
+          >
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition ease-linear duration-300"
+            >
+              <h3 class="text-2xl font-sudip-font">Graphics Works</h3>
+              <img
+                class="h-32 w-96 rounded-xl"
+                src="../assets/grid1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="row-start-3 row-end-6 group rounded-2xl p-[1px] bg-slate-50 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition ease-linear duration-300"
+          >
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition ease-linear duration-300"
+            >
+              <h3 class="text-2xl font-sudip-font">Graphics Works</h3>
+              <p class="text-center">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam,
+                earum eius unde deserunt vitae illo quos atque, mollitia
+                consectetur recusandae, numquam reprehenderit? Harum!
+              </p>
+              <img
+                class="h-32 w-96 rounded-xl"
+                src="../assets/grid1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- contact me section  -->
+      <div class="container">
+        <h2 class="text-center pb-8 font-semibold text-4xl md:text-5xl">
+          Contact Me
+        </h2>
+        <div
+          class="border rounded-lg overflow-hidden flex justify-center p-4 bg-white py-4"
+        >
+          <div id="line4" class="flex gap-8 p-6 justify-center items-center">
+            <img class="w-9" src="../assets/linkedin.svg" alt="" />
+            <a
+              href="https://www.linkedin.com/in/sudip-pandey-b20976259/"
+              class="text-xl whitespace-nowrap"
+              >Sudip Pandey</a
+            >
+            <span>•</span>
+            <img class="w-9" src="../assets/gmail.svg" alt="" />
+            <a
+              href="https://www.linkedin.com/in/sudip-pandey-b20976259/"
+              class="text-xl whitespace-nowrap"
+              >mainsudip25@gmail.com</a
+            >
+            <span>•</span>
+            <img class="w-9" src="../assets/linkedin.svg" alt="" />
+            <a
+              href="https://www.linkedin.com/in/sudip-pandey-b20976259/"
+              class="text-xl whitespace-nowrap"
+              >Sudip Pandey</a
+            >
+            <span>•</span>
+            <img class="w-9" src="../assets/twiiter.svg" alt="" />
+            <a
+              href="https://www.linkedin.com/in/sudip-pandey-b20976259/"
+              class="text-xl whitespace-nowrap"
+              >@SudipShakya11</a
+            >
+            <span>•</span>
+            <img class="w-9" src="../assets/insta.svg" alt="" />
+            <a
+              href="https://www.linkedin.com/in/sudip-pandey-b20976259/"
+              class="text-xl whitespace-nowrap"
+              >@sudip.apk</a
+            >
+            <span>•</span>
+          </div>
+        </div>
+        <div
+          id="form"
+          class="flex flex-col gap-8 pt-12 mt-12 mx-2 md:mx-40 bg-gradient-to-br from-purple-100 via-orange-100 to-transparent border-gray-500 rounded-xl p-8"
+        >
+          <span class="text-2xl mx-4 text-center font-medium"
+            >Send me a message</span
+          >
+          <form
+            onsubmit="sendEmail(); reset(); return false"
+            class="flex flex-col gap-8 mx-4 items-center justify-center"
+          >
+            <input
+              class="w-4/5 md:w-3/5 py-3 text-l p-2 rounded-xl focus:outline-none focus:ring focus:ring-purple-600"
+              type="text"
+              id="name"
+              required
+              placeholder="Full Name"
+            />
+
+            <input
+              class="w-4/5 md:w-3/5 py-3 text-l p-2 rounded-xl focus:outline-none focus:ring focus:ring-purple-600"
+              type="email"
+              id="email"
+              required
+              placeholder="Your Email"
+            />
+
+            <input
+              class="w-4/5 md:w-3/5 py-3 text-l p-2 rounded-xl focus:outline-none focus:ring focus:ring-purple-600"
+              type="text"
+              id="Address"
+              placeholder="Address"
+            />
+            <textarea
+              class="w-4/5 md:w-3/5 py-3 text-l p-2 rounded-xl focus:outline-none focus:ring focus:ring-purple-600"
+              name="message-box"
+              rows="8"
+              id="message-box"
+              placeholder="write your message"
+            ></textarea>
+            <button
+              class="text-white font-semibold bg-purple-700 text-center px-12 py-2 rounded-lg mt-4 hover:text-black hover:bg-white hover:border hover:border-purple-700 transition ease-linear duration-300"
+              type="submit"
+            >
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div
+        class="rounded-lg border bg-gray-50 flex flex-col lg:flex-row-reverse items-center px-8 py-12 gap-8"
+      >
+        <a href="#" class="text-lg font-light font-sdp-font">Sudip Pandey</a>
+        <div class="flex gap-8 text-lg">
+          <a href="" class="text-gray-600 hover:text-gray-900"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="" class="text-gray-600 hover:text-gray-900"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+        <a
+          href="#"
+          id="brand"
+          class="flex justify-between items-center gap-2 font-medium flex-1"
+        >
+          <img
+            src="../assets/asset 1.png"
+            alt="Logo"
+            class="max-w-12 object-cover rounded-full"
+          />
+          <span class="font-sdp-font text-lg flex-1">@sud.artsy</span>
+        </a>
+      </div>
+    </main>
+  </body>
+  <script src="../script.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</html>
